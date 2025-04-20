@@ -29,6 +29,12 @@ for k in occurrences.keys():
 
 discrete = utils.discrete_distribution(diff_probs)
 
+expected = utils.expected_value(list(set(diffs)), diff_probs)
+variance = utils.variance(list(set(diffs)), diff_probs)
+
+print("Expected value: ", expected)
+print("Variance: ", variance)
+
 plt, ax = plt.subplots(2, 1)
 
 ax[0].bar(list(set(diffs)), diff_probs)
