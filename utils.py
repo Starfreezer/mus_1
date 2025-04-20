@@ -1,11 +1,11 @@
 import numpy as np
 
 
-def discrete_distribution(vals):
+def discrete_distribution(probs):
     cumul = 0
     dist = []
 
-    for val in vals:
+    for val in probs:
         cumul = cumul + val
         dist.append(cumul)
 
