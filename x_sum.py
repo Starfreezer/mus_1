@@ -14,7 +14,7 @@ fig, ax = plt.subplots(2, 1)
 
 ax[0].bar(x_labels, x)
 ax[0].set(xlim=(1, 13), xticks=np.arange(1, 13))
-ax[0].set_title("Verteilung von X")
+ax[0].set_title("Verteilung von " + '$X_{sum}$')
 ax[0].set_xlabel("Augensumme")
 ax[0].set_ylabel("Wahrscheinlichkeit")
 
@@ -27,6 +27,7 @@ ax[1].step(x_labels, utils.discrete_distribution(x))
 ax[1].set_title("Verteilungsfunktion von X")
 ax[1].set_xlabel("P(X <= t)")
 ax[1].set_ylabel("Kumulative Wahrscheinlichkeit")
+ax[1].set_title("Verteilungsfunktion von " + '$X_{sum}$')
 
 plt.tight_layout()
 plt.show()
