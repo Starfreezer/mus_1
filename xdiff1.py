@@ -41,11 +41,15 @@ ax[0].bar(list(set(diffs)), diff_probs)
 ax[0].set(xlim=(-1, 6), xticks=np.arange(0, 6), ylim=(0, 0.5))
 ax[0].set_xlabel("i (Difference)")
 ax[0].set_ylabel("P(X_diff = i)")
+ax[0].set_title("Verteilung von " + '$X_{diff1}$')
+
 
 ax[1].step(list(set(diffs)), discrete)
 ax[1].set(xlim=(0, 6), xticks=np.arange(0, 6), ylim=(0, 1.2), yticks=(np.linspace(0.0, 1.0, num=5)))
-ax[0].set_xlabel("t")
-ax[0].set_ylabel("P(X_diff <= t)")
+ax[1].set_xlabel("t")
+ax[1].set_ylabel("P(X_diff <= t)")
+ax[1].set_title("Verteilungsfunktion von " + '$X_{diff1}$')
+
 
 plt.tight_layout()
 plt.show()
