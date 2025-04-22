@@ -18,12 +18,14 @@ ax[0].bar(minima, minima_probs)
 ax[0].set(xlim=(0, 7), xticks=np.arange(1, 7), ylim=(0, 0.5))
 ax[0].set_xlabel("Minimum")
 ax[0].set_ylabel("P(Min(x1,x2) = i")
+ax[0].set_title("Verteilung von " + '$X_{sum}$')
 
 
 ax[1].step(minima, discrete)
 ax[1].set(xlim=(0, 7), xticks=np.arange(1, 7), ylim=(0.2, 1.1))
 ax[1].set_xlabel("t")
 ax[1].set_ylabel("P(Min(x1,x2) <= t)")
+ax[1].set_title("Verteilungsfunktion von " + '$X_{sum}$')
 
 expected_value = utils.expected_value(minima, minima_probs)
 variance = utils.variance(minima, minima_probs)
