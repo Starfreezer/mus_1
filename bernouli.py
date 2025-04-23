@@ -17,14 +17,16 @@ ax[0].bar(x_range, x_probs)
 ax[0].set(xlim=(0, 10), xticks=np.arange(0, 11))
 ax[0].set_xlabel("x")
 ax[0].set_ylabel("P(X=x)")
+ax[0].set_title("Verteilung von X")
 
 discrete = utils.discrete_distribution(x_probs)
 ax[1].bar(x_range, discrete)
-ax[0].set(xlim=(0, 10), xticks=np.arange(0, 11))
-ax[0].set_xlabel("x")
-ax[0].set_ylabel("P(X<=x)")
+ax[1].set(xlim=(0, 10), xticks=np.arange(0, 11))
+ax[1].set_xlabel("x")
+ax[1].set_ylabel("P(X<=x)")
+ax[1].set_title("Verteilungsfunktion von X")
 
-print("P(X <= 4) =  ", discrete[5])
+print("P(X <= 4) =  ", discrete[4])
 
 
 plt.tight_layout()
